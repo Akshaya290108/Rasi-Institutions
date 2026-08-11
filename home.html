@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rasi Institutions - Empowering Minds, Shaping Futures</title>
+
+  <!-- Google Fonts: Modern & Unique Outfit + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ==========================================
+       CSS STYLES & COLOR THEME
+       ========================================== */
+    :root {
+      --bg-sky-light: #f0f7ff;
+      --bg-sky-gradient: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #bae6fd 100%);
+      --card-white: #ffffff;
+      --primary-sky: #0284c7;
+      --deep-navy: #0369a1;
+      --dark-navy: #0f172a;
+      --accent-gold: #d97706;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --glass-border: 1px solid rgba(255, 255, 255, 0.9);
+      --box-shadow: 0 15px 35px -5px rgba(3, 105, 161, 0.12), 0 8px 15px -6px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background: var(--bg-sky-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+
+    /* --- Navigation Bar --- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 2px solid rgba(186, 230, 253, 0.8);
+      padding: 16px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 25px rgba(2, 132, 199, 0.1);
+    }
+
+    .brand-block {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      padding: 12px 24px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 8px 25px rgba(2, 132, 199, 0.35);
+      border: 2px solid #ffffff;
+      transition: transform 0.3s ease;
+    }
+
+    .brand-block:hover {
+      transform: translateY(-2px);
+    }
+
+    .logo-icon {
+      background: #ffffff;
+      color: var(--deep-navy);
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 8px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--dark-navy);
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14.5px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(2, 132, 199, 0.1);
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+      background: linear-gradient(135deg, var(--primary-sky), var(--deep-navy));
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.3);
+      transform: translateY(-2px);
+      border-color: transparent;
+    }
+
+    /* --- Page Container --- */
+    main {
+      max-width: 1350px;
+      margin: 35px auto;
+      padding: 0 24px 80px 24px;
+    }
+
+    .page-section {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out forwards;
+    }
+
+    .page-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Section Headers --- */
+    .section-header {
+      text-align: center;
+      margin-bottom: 45px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: var(--box-shadow);
+      border: var(--glass-border);
+    }
+
+    .section-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--deep-navy);
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 16.5px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 500;
+    }
+
+    /* --- Hero Card --- */
+    .hero-card {
+      background: var(--card-white);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 45px;
+      border: var(--glass-border);
+    }
+
+    .hero-content {
+      padding: 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-badge {
+      background: #e0f2fe;
+      color: var(--deep-navy);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 700;
+      width: fit-content;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--primary-sky);
+    }
+
+    .hero-content h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 42px;
+      line-height: 1.25;
+      color: var(--dark-navy);
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero-content p {
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* --- Stats Bar --- */
+    .stats-bar {
+      background: var(--card-white);
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: var(--box-shadow);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      gap: 20px;
+      margin-bottom: 45px;
+      border: var(--glass-border);
+    }
+
+    .stat-number {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--primary-sky);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 14.5px;
+    }
+
+    /* --- Feature Card Grids --- */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: var(--card-white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      border: var(--glass-border);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(2, 132, 199, 0.18);
+    }
+
+    .card-img-container {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+
+    .card-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    /* FACULTY SPECIFIC IMAGE FULL FIT FIX */
+    .faculty-card .card-img-container {
+      height: 320px;
+      background: #f0f7ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .faculty-card .card-img-container img {
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .card:hover .card-img-container img {
+      transform: scale(1.04);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(3, 105, 161, 0.92);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 2;
+    }
+
+    .card-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-text {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .feature-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+
+    .tag {
+      background: #f0f9ff;
+      color: var(--primary-sky);
+      border: 1px solid #bae6fd;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* --- Form Controls --- */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      outline: none;
+      font-size: 15px;
+      background: #f8fafc;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      background: #fff;
+      border-color: var(--primary-sky);
+      box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--primary-sky), var(--deep-navy));
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.4);
+    }
+
+    .phone-highlight {
+      background: #e0f2fe;
+      border: 2px dashed var(--primary-sky);
+      padding: 15px 20px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--deep-navy);
+      font-size: 18px;
+      font-weight: 800;
+      margin: 15px 0;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: var(--dark-navy);
+      color: #94a3b8;
+      text-align: center;
+      padding: 40px;
+      margin-top: 80px;
+      font-size: 14.5px;
+      border-top: 1px solid #1e293b;
+    }
+
+    /* Mobile Responsive Adjustments */
+    @media (max-width: 900px) {
+      header { flex-direction: column; gap: 15px; padding: 15px; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero-card { grid-template-columns: 1fr; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION BAR WITH STANDOUT BRAND BLOCK
+       ========================================== -->
+  <header>
+    <div class="brand-block">
+      <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="logo-text">Rasi Institutions</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a onclick="showSection('home')" id="nav-home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a onclick="showSection('about')" id="nav-about"><i class="fa-solid fa-landmark"></i> About Us</a></li>
+        <li><a onclick="showSection('courses')" id="nav-courses"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+        <li><a onclick="showSection('campus')" id="nav-campus"><i class="fa-solid fa-microchip"></i> AI Campus</a></li>
+        <li><a onclick="showSection('faculty')" id="nav-faculty"><i class="fa-solid fa-user-tie"></i> Faculty</a></li>
+        <li><a onclick="showSection('events')" id="nav-events"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
+        <li><a onclick="showSection('contact')" id="nav-contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==========================================
+         1. HOME SECTION
+         ========================================== -->
+    <section id="home" class="page-section active">
+      <div class="hero-card">
+        <div class="hero-content">
+          <span class="hero-badge"><i class="fa-solid fa-award"></i> NAAC A++ Grade Accredited</span>
+          <h1>Welcome to Rasi Institutions</h1>
+          <p>Where academic innovation meets AI-integrated learning environments. Empowering over 15,000 future leaders through world-class engineering, technology, and research disciplines.</p>
+          <button class="btn" onclick="showSection('courses')">Explore All Programs <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80" alt="Rasi Main Campus">
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div>
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Years Legacy</div>
+        </div>
+        <div>
+          <div class="stat-number">15,000+</div>
+          <div class="stat-label">Global Alumni</div>
+        </div>
+        <div>
+          <div class="stat-number">98.4%</div>
+          <div class="stat-label">Placement Record</div>
+        </div>
+        <div>
+          <div class="stat-number">120+</div>
+          <div class="stat-label">Corporate Partners</div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h2>10 World-Class Institutional Pillars</h2>
+        <p>Explore what makes Rasi Institutions a premier destination for higher engineering and technology education</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Home Card 1 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Academic Excellence">
+            <span class="card-badge">Pillar 01</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-star"></i> NAAC A++ Autonomous Status</div>
+            <p class="card-text">Conferred Autonomous status with NBA and NAAC A++ accreditation, offering outcome-based curriculum aligned with global tier-1 standards and university benchmarks.</p>
+            <div class="feature-tags"><span class="tag">NAAC A++</span><span class="tag">Autonomous</span><span class="tag">NBA Accredited</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 2 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="100% Placements">
+            <span class="card-badge">Pillar 02</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-briefcase"></i> 100% Career Placement Record</div>
+            <p class="card-text">Dedicated corporate relations cell connecting students with 120+ MNC recruiters including Google, Microsoft, TCS, Wipro, Infosys, and Amazon with ₹42 LPA highest package.</p>
+            <div class="feature-tags"><span class="tag">Top Recruiters</span><span class="tag">₹42 LPA Package</span><span class="tag">Mock Bootcamps</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 3 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="AI Robotics Hub">
+            <span class="card-badge">Pillar 03</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-robot"></i> NVIDIA AI & Supercomputing Center</div>
+            <p class="card-text">State-of-the-art supercomputing laboratory equipped with NVIDIA A100 Tensor Core GPUs, humanoid robotics kits, and autonomous vehicle simulator rigs.</p>
+            <div class="feature-tags"><span class="tag">NVIDIA GPUs</span><span class="tag">Humanoid Bots</span><span class="tag">AI Research</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 4 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80" alt="Eco Campus">
+            <span class="card-badge">Pillar 04</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-leaf"></i> 100-Acre Eco-Smart Green Campus</div>
+            <p class="card-text">Lush green environment powered by 500kW solar power grids, 24/7 Gigabit Fiber-optic Wi-Fi coverage, and automated zero-waste management systems.</p>
+            <div class="feature-tags"><span class="tag">100 Acres</span><span class="tag">Solar Powered</span><span class="tag">Gigabit Wi-Fi</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 5 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Doctorate Faculty">
+            <span class="card-badge">Pillar 05</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-graduate"></i> Doctorate (Ph.D.) Research Mentors</div>
+            <p class="card-text">Learn directly from over 150+ doctorate professors and industry veterans who have authored over 500+ international research publications and patents.</p>
+            <div class="feature-tags"><span class="tag">Ph.D. Faculty</span><span class="tag">IEEE Authors</span><span class="tag">Patents Filed</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 6 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Digital Library">
+            <span class="card-badge">Pillar 06</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-book-bookmark"></i> Automated Digital Central Library</div>
+            <p class="card-text">Access 1,50,000+ print volumes, RFID borrowing kiosks, 24/7 digital e-journal subscriptions (IEEE, Springer, Elsevier), and silent individual study pods.</p>
+            <div class="feature-tags"><span class="tag">RFID Systems</span><span class="tag">1.5L+ Books</span><span class="tag">IEEE Digital</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 7 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80" alt="Incubation Cell">
+            <span class="card-badge">Pillar 07</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-lightbulb"></i> Startup Incubation & Seed Funding</div>
+            <p class="card-text">In-house startup incubator backed by ₹2 Crore seed funding support, mentoring student founders from initial ideation to patent registration and launch.</p>
+            <div class="feature-tags"><span class="tag">₹2 Cr Seed Fund</span><span class="tag">Patents</span><span class="tag">Mentorship</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 8 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="Global Exchange">
+            <span class="card-badge">Pillar 08</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-earth-americas"></i> International University Collaborations</div>
+            <p class="card-text">Strategic MoUs signed with partner universities in the UK, USA, Germany, and Australia offering dual-degree programs and semester exchange options.</p>
+            <div class="feature-tags"><span class="tag">Global MoUs</span><span class="tag">UK & USA Exchange</span><span class="tag">Dual Degree</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 9 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Sports Complex">
+            <span class="card-badge">Pillar 09</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-trophy"></i> Olympic-Standard Sports Complex</div>
+            <p class="card-text">World-class indoor and outdoor sports facilities featuring synthetic track lines, indoor badminton arenas, Olympic swimming pool, and fully equipped gym.</p>
+            <div class="feature-tags"><span class="tag">Olympic Pool</span><span class="tag">Indoor Arena</span><span class="tag">Fitness Gym</span></div>
+          </div>
+        </div>
+
+        <!-- Home Card 10 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Hostel Complex">
+            <span class="card-badge">Pillar 10</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-bed"></i> Luxury Hostels & Multi-Cuisine Dining</div>
+            <p class="card-text">Air-conditioned student residences with 24/7 security guard patrol, biometric access, ultra-fast Wi-Fi, and multi-cuisine hygienic dining services.</p>
+            <div class="feature-tags"><span class="tag">AC Rooms</span><span class="tag">Biometric Safe</span><span class="tag">Hygienic Food</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         2. ABOUT US SECTION
+         ========================================== -->
+    <section id="about" class="page-section">
+      <div class="section-header">
+        <h2>About Rasi Institutions</h2>
+        <p>A quarter-century heritage of academic excellence, groundbreaking innovation, and societal impact</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- About Card 1 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80" alt="Foundation Heritage">
+            <span class="card-badge">Heritage</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-building-columns"></i> 1. Institutional Inception (1998)</div>
+            <p class="card-text">Established in 1998 with a noble vision to provide transformative engineering education to scholars, starting with 3 branches and 180 pioneer students.</p>
+            <div class="feature-tags"><span class="tag">Est. 1998</span><span class="tag">Pioneer Vision</span><span class="tag">Heritage</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 2 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Vision Mission">
+            <span class="card-badge">Core Purpose</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-bullseye"></i> 2. Core Vision & Mission Statement</div>
+            <p class="card-text">To foster an environment of continuous learning, research innovation, and ethical leadership that empowers students to address global technical challenges.</p>
+            <div class="feature-tags"><span class="tag">Leadership</span><span class="tag">Ethical Values</span><span class="tag">Innovation</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 3 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="Autonomous Status">
+            <span class="card-badge">Milestone</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-award"></i> 3. UGC Autonomous Recognition</div>
+            <p class="card-text">Conferred Autonomous status by UGC in 2012, allowing Rasi Institutions to design flexible, industry-relevant curricula aligned with global tech shifts.</p>
+            <div class="feature-tags"><span class="tag">UGC Autonomous</span><span class="tag">Modern Curriculum</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 4 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="NAAC Excellence">
+            <span class="card-badge">Accreditation</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-medal"></i> 4. Highest NAAC A++ Rating</div>
+            <p class="card-text">Awarded the prestigious NAAC A++ Grade, placing Rasi Institutions among the top 1% of higher educational institutions nationwide.</p>
+            <div class="feature-tags"><span class="tag">NAAC A++</span><span class="tag">Top 1% Rank</span><span class="tag">Quality Assured</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 5 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Research Park">
+            <span class="card-badge">Research</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-flask"></i> 5. Centralized Research Park</div>
+            <p class="card-text">Dedicated R&D wings receiving over ₹10 Crores in research grants from AICTE, DST, and ISRO for frontier interdisciplinary studies.</p>
+            <div class="feature-tags"><span class="tag">₹10 Cr Grants</span><span class="tag">DST Funded</span><span class="tag">ISRO Projects</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 6 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Community Outreach">
+            <span class="card-badge">Social Responsibility</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-hand-holding-heart"></i> 6. Social Impact & Rural Upliftment</div>
+            <p class="card-text">Active NSS and Youth Red Cross units adopting local villages, offering free computer literacy, clean water projects, and skill workshops.</p>
+            <div class="feature-tags"><span class="tag">Rural Uplift</span><span class="tag">NSS Units</span><span class="tag">Social Good</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 7 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Alumni Network">
+            <span class="card-badge">Global Alumni</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-users"></i> 7. Worldwide 15,000+ Alumni Network</div>
+            <p class="card-text">Our proud alumni hold leadership positions in Fortune 500 corporations across Silicon Valley, Europe, Asia-Pacific, and the Middle East.</p>
+            <div class="feature-tags"><span class="tag">Silicon Valley</span><span class="tag">Fortune 500</span><span class="tag">Global Mentors</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 8 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Governance">
+            <span class="card-badge">Leadership</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-shield"></i> 8. Visionary Management Board</div>
+            <p class="card-text">Guided by eminent educationists, former ISRO directors, and industrial pioneers who continuously steer campus infrastructure forward.</p>
+            <div class="feature-tags"><span class="tag">Eminent Board</span><span class="tag">ISRO Guidance</span><span class="tag">Strategic Plan</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 9 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Sustainability">
+            <span class="card-badge">Green Policy</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-seedling"></i> 9. Environmental Sustainability Pledge</div>
+            <p class="card-text">Certified net-zero plastic campus with automated rainwater harvesting systems and electric campus shuttle fleets.</p>
+            <div class="feature-tags"><span class="tag">Net-Zero Plastic</span><span class="tag">Rainwater Grid</span><span class="tag">EV Shuttles</span></div>
+          </div>
+        </div>
+
+        <!-- About Card 10 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Awards Recognition">
+            <span class="card-badge">Honors</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-trophy"></i> 10. National Education Excellence Awards</div>
+            <p class="card-text">Winner of the Best Private Engineering Institution Award in South India for three consecutive years by National Higher Ed Review.</p>
+            <div class="feature-tags"><span class="tag">Best Engineering</span><span class="tag">National Award</span><span class="tag">3-Time Winner</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. COURSES SECTION
+         ========================================== -->
+    <section id="courses" class="page-section">
+      <div class="section-header">
+        <h2>Academic Degree Programs</h2>
+        <p>Comprehensive engineering, technology, and management courses tailored for modern industry demands</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Course Card 1 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="B.E Computer Science">
+            <span class="card-badge">B.E. Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-laptop-code"></i> 1. B.E. Computer Science & Engineering</div>
+            <p class="card-text">Covers core algorithms, cloud computing, full-stack web engineering, cybersecurity, and distributed database management.</p>
+            <div class="feature-tags"><span class="tag">4 Years</span><span class="tag">240 Seats</span><span class="tag">Full-Stack Lab</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 2 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="B.Tech AI and DS">
+            <span class="card-badge">B.Tech Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-brain"></i> 2. B.Tech Artificial Intelligence & Data Science</div>
+            <p class="card-text">Deep learning architectures, neural networks, machine learning algorithms, NLP, and enterprise data analytics pipelines.</p>
+            <div class="feature-tags"><span class="tag">4 Years</span><span class="tag">180 Seats</span><span class="tag">NVIDIA GPU Lab</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 3 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="B.E Electronics">
+            <span class="card-badge">B.E. Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-microchip"></i> 3. B.E. Electronics & Communication</div>
+            <p class="card-text">VLSI microchip design, embedded IoT system architectures, 5G signal processing, and robotics communication protocol design.</p>
+            <div class="feature-tags"><span class="tag">4 Years</span><span class="tag">180 Seats</span><span class="tag">VLSI Cadence Lab</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 4 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="B.Tech IT">
+            <span class="card-badge">B.Tech Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-server"></i> 4. B.Tech Information Technology</div>
+            <p class="card-text">Enterprise network infrastructure, ethical hacking, mobile application frameworks, and cloud server security protocols.</p>
+            <div class="feature-tags"><span class="tag">4 Years</span><span class="tag">120 Seats</span><span class="tag">Cyber Shield Lab</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 5 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=800&q=80" alt="B.E Mechanical">
+            <span class="card-badge">B.E. Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-gear"></i> 5. B.E. Mechanical & Automation Engg</div>
+            <p class="card-text">3D CAD design, EV powertrain systems, CNC automated manufacturing, thermal fluid dynamics, and industrial robotics.</p>
+            <div class="feature-tags"><span class="tag">4 Years</span><span class="tag">120 Seats</span><span class="tag">Electric Vehicle Lab</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 6 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="B.E Civil">
+            <span class="card-badge">B.E. Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-building"></i> 6. B.E. Civil & Structural Engineering</div>
+            <p class="card-text">Smart sustainable infrastructure design, earthquake resistance engineering, GIS satellite mapping, and concrete tech.</p>
+            <div class="feature-tags"><span class="tag">4 Years</span><span class="tag">60 Seats</span><span class="tag">GIS Survey Lab</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 7 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robotics Branch">
+            <span class="card-badge">B.Tech Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-robot"></i> 7. B.Tech Robotics & Mechatronics</div>
+            <p class="card-text">Interdisciplinary branch combining mechanical control systems, sensor networks, microcontrollers, and AI automation.</p>
+            <div class="feature-tags"><span class="tag">4 Years</span><span class="tag">60 Seats</span><span class="tag">Mechatronics Cell</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 8 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="MBA Degree">
+            <span class="card-badge">PG Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-chart-line"></i> 8. Master of Business Administration (MBA)</div>
+            <p class="card-text">Executive training in AI Business Analytics, Financial Tech, Human Resource Management, and Startup Growth Strategy.</p>
+            <div class="feature-tags"><span class="tag">2 Years</span><span class="tag">120 Seats</span><span class="tag">Incubation Access</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 9 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="MCA Degree">
+            <span class="card-badge">PG Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-code"></i> 9. Master of Computer Applications (MCA)</div>
+            <p class="card-text">Advanced software engineering, enterprise cloud architectures, mobile app design, and database administration.</p>
+            <div class="feature-tags"><span class="tag">2 Years</span><span class="tag">60 Seats</span><span class="tag">Cloud Server Hub</span></div>
+          </div>
+        </div>
+
+        <!-- Course Card 10 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Ph.D. Programs">
+            <span class="card-badge">Doctoral Degree</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-graduation-cap"></i> 10. Ph.D. Research Programs</div>
+            <p class="card-text">Full-time and part-time doctoral research fellowship opportunities across all engineering branches with university stipend.</p>
+            <div class="feature-tags"><span class="tag">Research</span><span class="tag">Stipend Given</span><span class="tag">IEEE Publications</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. AI CAMPUS SECTION
+         ========================================== -->
+    <section id="campus" class="page-section">
+      <div class="section-header">
+        <h2>AI-Powered Smart Campus Environment</h2>
+        <p>Step into a futuristic eco-system where Artificial Intelligence and modern technology enhance every aspect of student life</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Campus Card 1 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="VR Classrooms">
+            <span class="card-badge">AI Feature 01</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-vr-cardboard"></i> 1. AR/VR Holographic Classrooms</div>
+            <p class="card-text">Interactive 3D Virtual Reality lecture screens allowing students to dissect complex engine parts, architectural structures, and molecular models in real time.</p>
+            <div class="feature-tags"><span class="tag">3D Visuals</span><span class="tag">VR Headsets</span><span class="tag">Interactive</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 2 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Humanoid Robots">
+            <span class="card-badge">AI Feature 02</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-robot"></i> 2. Humanoid Campus Reception Assistants</div>
+            <p class="card-text">AI humanoid bots stationed across administrative lobbies to welcome visitors, issue visitor passes, and direct students to specific lecture halls.</p>
+            <div class="feature-tags"><span class="tag">AI Reception</span><span class="tag">Voice Navigation</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 3 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Robotic Library">
+            <span class="card-badge">AI Feature 03</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-book-bookmark"></i> 3. RFID & Robotic Smart Library</div>
+            <p class="card-text">Automated book sorting and retrieval system using RFID tags and robotic assistant arms for instant book borrowing and return processing.</p>
+            <div class="feature-tags"><span class="tag">Robotic Sorting</span><span class="tag">RFID Access</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 4 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="IoT Energy Grid">
+            <span class="card-badge">AI Feature 04</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-bolt"></i> 4. IoT Energy Grid & Solar Automation</div>
+            <p class="card-text">Campus power usage monitored by smart sensors that automatically adjust lighting and climate control based on classroom occupancy, cutting energy waste by 40%.</p>
+            <div class="feature-tags"><span class="tag">40% Energy Saved</span><span class="tag">Smart Grid</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 5 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Smart Security">
+            <span class="card-badge">AI Feature 05</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-shield-halved"></i> 5. AI Facial Recognition Security Kiosks</div>
+            <p class="card-text">Touchless, secure biometric gates at hostel and campus entryways providing instant security authorization and student attendance logging.</p>
+            <div class="feature-tags"><span class="tag">Facial Recognition</span><span class="tag">24/7 Security</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 6 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Supercomputer Server">
+            <span class="card-badge">AI Feature 06</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-server"></i> 6. NVIDIA GPU Supercomputing Cluster</div>
+            <p class="card-text">In-house server facility housing high-performance GPU hardware available to all students for training massive generative AI models and data science projects.</p>
+            <div class="feature-tags"><span class="tag">NVIDIA A100</span><span class="tag">Deep Learning</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 7 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80" alt="Smart Cafeteria">
+            <span class="card-badge">AI Feature 07</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-utensils"></i> 7. Automated Smart Cafeteria System</div>
+            <p class="card-text">Students order food seamlessly via the Rasi Campus Mobile App, with AI meal preparation queues reducing dining hall wait times by 80%.</p>
+            <div class="feature-tags"><span class="tag">App Ordering</span><span class="tag">Zero Wait Time</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 8 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80" alt="Smart Bus Transport">
+            <span class="card-badge">AI Feature 08</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-bus"></i> 8. Real-Time GPS & AI Traffic Bus Routing</div>
+            <p class="card-text">Every fleet bus is connected to AI routing software that monitors city traffic patterns to provide live arrival updates to parents and students.</p>
+            <div class="feature-tags"><span class="tag">GPS Tracking</span><span class="tag">Smart Transport</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 9 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80" alt="AI Greenhouse">
+            <span class="card-badge">AI Feature 09</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-seedling"></i> 9. Automated Hydroponic AI Greenhouse</div>
+            <p class="card-text">Smart campus greenhouse managed by micro-drip irrigation AI sensors, cultivating fresh organic vegetables for student mess halls.</p>
+            <div class="feature-tags"><span class="tag">Hydroponics</span><span class="tag">Organic Produce</span></div>
+          </div>
+        </div>
+
+        <!-- Campus Card 10 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="AI Student Bot">
+            <span class="card-badge">AI Feature 10</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-comments"></i> 10. 24/7 AI Learning & Mentor Bot</div>
+            <p class="card-text">A customized AI assistant integrated into the student portal, helping students clear doubts, solve code bugs, and check exam schedules instantly.</p>
+            <div class="feature-tags"><span class="tag">24/7 Study Bot</span><span class="tag">Code Assistant</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. FACULTY SECTION (FULL IMAGE DISPLAY FIX)
+         ========================================== -->
+    <section id="faculty" class="page-section">
+      <div class="section-header">
+        <h2>Our Renowned Doctorate Faculty & Leadership</h2>
+        <p>Meet the visionary academic leaders, doctorate professors, and research mentors at Rasi Institutions</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Faculty Card 1 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Dr. Aruna Sundaram">
+            <span class="card-badge">Ph.D. IIT Madras</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 1. Dr. Aruna Sundaram</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">Dean - School of Computing</p>
+            <p class="card-text">22+ years experience in Cloud Architectures & Distributed Systems. Author of 5 technical books and 60+ international IEEE journal papers.</p>
+            <div class="feature-tags"><span class="tag">22+ Yrs Exp</span><span class="tag">Cloud Expert</span><span class="tag">60+ Papers</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 2 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Dr. Rajesh Kumar">
+            <span class="card-badge">Ph.D. IISc Bangalore</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 2. Dr. Rajesh Kumar</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">HOD - AI & Data Science</p>
+            <p class="card-text">Specialist in Deep Neural Networks. Recipient of National AI Innovation Award with 45 IEEE papers and 3 registered technology patents.</p>
+            <div class="feature-tags"><span class="tag">National Awardee</span><span class="tag">Neural Nets</span><span class="tag">3 Patents</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 3 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Prof. Meenakshi Raman">
+            <span class="card-badge">Ex-ISRO Scientist</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 3. Prof. Meenakshi Raman</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">HOD - Electronics & Comm</p>
+            <p class="card-text">18 years expertise in Satellite Telecommunication, Embedded IoT Systems, and VLSI Microchip Design. Former senior researcher at ISRO.</p>
+            <div class="feature-tags"><span class="tag">ISRO Veteran</span><span class="tag">VLSI Chips</span><span class="tag">5G Comms</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 4 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Dr. Viswanathan">
+            <span class="card-badge">Director</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 4. Dr. K. Viswanathan</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">Director - Academic Admin</p>
+            <p class="card-text">Over 28 years in academic governance, leading university accreditation boards and setting up research partnerships with foreign universities.</p>
+            <div class="feature-tags"><span class="tag">28+ Yrs Exp</span><span class="tag">Academic Leader</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 5 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Dr. P. Lakshmi">
+            <span class="card-badge">Ph.D. Structural</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 5. Dr. P. Lakshmi</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">HOD - Civil Engineering</p>
+            <p class="card-text">Consultant for national smart highway projects, earthquake resistant structures, and green self-healing concrete formulations.</p>
+            <div class="feature-tags"><span class="tag">Smart Infra</span><span class="tag">Structural Expert</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 6 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Prof. David Wilson">
+            <span class="card-badge">Placement Head</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 6. Prof. David Wilson</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">Head - Corporate Placement</p>
+            <p class="card-text">Pioneering 100% placement records year after year by bridging corporate recruitment requirements with hands-on bootcamp training.</p>
+            <div class="feature-tags"><span class="tag">Placement Lead</span><span class="tag">120+ MNC MoUs</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 7 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Dr. Priya Dharshini">
+            <span class="card-badge">Incubation Director</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 7. Dr. Priya Dharshini</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">Director - R&D Incubation Cell</p>
+            <p class="card-text">Mentoring student startup founders, filing intellectual property rights, and securing government venture capital funds.</p>
+            <div class="feature-tags"><span class="tag">Startup Mentor</span><span class="tag">Patent Filing</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 8 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Dr. S. Ananth">
+            <span class="card-badge">Ph.D. Robotics</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 8. Dr. S. Ananthakrishnan</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">HOD - Mechanical & Robotics</p>
+            <p class="card-text">Specialist in Electric Vehicle (EV) battery systems, autonomous drone stabilization, and 3D printing technologies.</p>
+            <div class="feature-tags"><span class="tag">EV Tech</span><span class="tag">Drones</span><span class="tag">Robotics</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 9 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=800&q=80" alt="Prof. Shalini Gupta">
+            <span class="card-badge">Soft Skills Lead</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 9. Prof. Shalini Gupta</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">Head - Personality & Counseling</p>
+            <p class="card-text">Conducting soft skills training, mock interview sessions, group discussions, and student mental wellness workshops.</p>
+            <div class="feature-tags"><span class="tag">Soft Skills</span><span class="tag">Corporate Prep</span></div>
+          </div>
+        </div>
+
+        <!-- Faculty Card 10 -->
+        <div class="card faculty-card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Dr. G. Balaji">
+            <span class="card-badge">Sports Director</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-user-tie"></i> 10. Dr. G. Balaji</div>
+            <p style="color: var(--primary-sky); font-weight: 700; margin-bottom: 8px;">Chief Physical Education Director</p>
+            <p class="card-text">Former national athlete training college teams for university trophies in cricket, football, swimming, and track events.</p>
+            <div class="feature-tags"><span class="tag">National Athlete</span><span class="tag">Sports Lead</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. EVENTS SECTION
+         ========================================== -->
+    <section id="events" class="page-section">
+      <div class="section-header">
+        <h2>Campus Life & Annual Events</h2>
+        <p>Vibrant technical symposiums, hackathons, sports championships, and cultural festivals</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Event Card 1 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Rasi Techfest">
+            <span class="card-badge">March Event</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-microchip"></i> 1. RASI TECHFEST 2026</div>
+            <p class="card-text">National level inter-collegiate technical symposium featuring robo-wars, line-follower bots, paper presentations, and code debugging challenges.</p>
+            <div class="feature-tags"><span class="tag">Robo Wars</span><span class="tag">National Level</span><span class="tag">₹5 Lakh Cash Prize</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="AI Hackathon">
+            <span class="card-badge">24-Hr Coding</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-code"></i> 2. 24-Hour Non-Stop AI Hackathon</div>
+            <p class="card-text">Over 500+ student developers work continuously to build prototype solutions for healthcare, climate change, and smart cities.</p>
+            <div class="feature-tags"><span class="tag">24 Hours</span><span class="tag">500+ Devs</span><span class="tag">Sponsored</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="NIRVANA Cultural">
+            <span class="card-badge">April Gala</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-music"></i> 3. NIRVANA Grand Cultural Fest</div>
+            <p class="card-text">3-day mega cultural extravaganza featuring live music celebrity concerts, fashion shows, Western dance competitions, and pro nights.</p>
+            <div class="feature-tags"><span class="tag">3-Day Gala</span><span class="tag">Live Music</span><span class="tag">Celebrity Guest</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 4 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80" alt="Annual Sports">
+            <span class="card-badge">February Sports</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-trophy"></i> 4. Annual Athletics & Sports Meet</div>
+            <p class="card-text">Inter-departmental championship tournament for track and field events, cricket, football, volleyball, and indoor chess leagues.</p>
+            <div class="feature-tags"><span class="tag">Track & Field</span><span class="tag">Trophy League</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 5 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Research Summit">
+            <span class="card-badge">July Research</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-globe"></i> 5. Global Green Tech Research Summit</div>
+            <p class="card-text">International research conference bringing international scientists together to publish paper proceedings in IEEE digital library.</p>
+            <div class="feature-tags"><span class="tag">IEEE Proceedings</span><span class="tag">Global Scientists</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 6 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80" alt="Graduation Day">
+            <span class="card-badge">Convocation</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-graduation-cap"></i> 6. Grand Convocation Day</div>
+            <p class="card-text">Graduation ceremony conferring degree certificates and rank holder gold medals by eminent university vice-chancellors.</p>
+            <div class="feature-tags"><span class="tag">Degree Awards</span><span class="tag">Gold Medals</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 7 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80" alt="Startup Expo">
+            <span class="card-badge">August Expo</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-rocket"></i> 7. Student Startup Innovation Expo</div>
+            <p class="card-text">Inaugural startup exhibition where student entrepreneurs pitch prototypes to angel investors and seed funding venture firms.</p>
+            <div class="feature-tags"><span class="tag">Angel Pitch</span><span class="tag">Seed Money</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 8 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" alt="Alumni Reunion">
+            <span class="card-badge">October Meet</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-handshake"></i> 8. Global Alumni Homecoming Meet</div>
+            <p class="card-text">Annual reunion dinner connecting current final-year engineering students with distinguished alumni working worldwide.</p>
+            <div class="feature-tags"><span class="tag">Alumni Network</span><span class="tag">Mentorship</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 9 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80" alt="Green Plantation">
+            <span class="card-badge">NSS Event</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-seedling"></i> 9. Mega 5000-Tree Plantation Drive</div>
+            <p class="card-text">Green campus initiative organized by NSS volunteers planting native saplings across surrounding rural highway stretches.</p>
+            <div class="feature-tags"><span class="tag">5000 Saplings</span><span class="tag">Green Earth</span></div>
+          </div>
+        </div>
+
+        <!-- Event Card 10 -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Placement Drive">
+            <span class="card-badge">Placement Season</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title"><i class="fa-solid fa-building-user"></i> 10. Corporate Recruitment Drive</div>
+            <p class="card-text">A month-long recruitment drive where 100+ tier-1 companies conduct technical interviews and issue instant job offer letters.</p>
+            <div class="feature-tags"><span class="tag">Offer Letters</span><span class="tag">100+ Companies</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7. CONTACT SECTION
+         ========================================== -->
+    <section id="contact" class="page-section">
+      <div class="section-header">
+        <h2>Contact Admissions & Campus Office</h2>
+        <p>Get in touch with us for admissions, campus tours, or course counseling</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card-body">
+          <h3 class="card-title" style="margin-bottom: 20px;"><i class="fa-solid fa-paper-plane"></i> Send Admission Inquiry</h3>
+          <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <input type="text" placeholder="Full Student Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Mobile Phone Number" required>
+            </div>
+            <div class="form-group">
+              <textarea rows="4" placeholder="Course Preference & Query details..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Application <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+
+        <div class="card card-body">
+          <h3 class="card-title" style="margin-bottom: 20px;"><i class="fa-solid fa-location-dot"></i> Official Campus Address</h3>
+          
+          <div class="phone-highlight">
+            <i class="fa-solid fa-phone-volume"></i> Direct Contact: 8438399167
+          </div>
+
+          <p class="card-text" style="margin-bottom: 12px;"><strong>Rasi Institutions Knowledge Park</strong><br>Main Highway Campus, Tamil Nadu, India</p>
+          <p class="card-text" style="margin-bottom: 12px;"><i class="fa-solid fa-envelope"></i> Email: admissions@rasiinstitutions.edu.in</p>
+          <p class="card-text" style="margin-bottom: 12px;"><i class="fa-solid fa-globe"></i> Website: www.rasiinstitutions.edu.in</p>
+          <p class="card-text" style="margin-bottom: 25px;"><i class="fa-solid fa-clock"></i> Office Hours: Mon - Sat (8:30 AM - 5:00 PM)</p>
+
+          <div class="card-img-container" style="border-radius: 14px; height: 180px;">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="Location Map Preview">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Rasi Institutions. All Rights Reserved. | Designed for Internship Project Presentation | Contact: 8438399167</p>
+  </footer>
+
+  <!-- ==========================================
+       JAVASCRIPT FOR INTERACTIVE PAGE SWITCHING
+       ========================================== -->
+  <script>
+    function showSection(sectionId) {
+      // 1. Hide all page sections
+      const sections = document.querySelectorAll('.page-section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // 2. Remove active state from nav links
+      const navLinks = document.querySelectorAll('nav ul li a');
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // 3. Show selected section
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+
+      // 4. Set active state on clicked nav link
+      const targetNav = document.getElementById('nav-' + sectionId);
+      if (targetNav) {
+        targetNav.classList.add('active');
+      }
+
+      // 5. Smooth scroll back to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert("Thank you! Your admission inquiry has been submitted successfully to Rasi Institutions. Our team will contact you shortly at 8438399167.");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
